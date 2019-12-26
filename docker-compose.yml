@@ -1,0 +1,20 @@
+version: '3'
+services:
+    ui-vuejs:
+        image: nginx:alpine
+        network_mode: bridge
+        environment:
+            - VIRTUAL_HOST=${PROJECT_URL}
+        volumes:
+            - ./dist:/usr/share/nginx/html
+    ui-vuejs-dev:
+        image: marvinenf/vuejs-dev
+        command: >
+            sh -c "
+                npm install &&
+                npm run serve
+            "
+        network_mode: bridge
+        volumes:
+            - ./:/var/www/html/app
+        
