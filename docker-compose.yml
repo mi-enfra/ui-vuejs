@@ -9,7 +9,11 @@ services:
             - ./dist:/usr/share/nginx/html
     ui-vuejs-dev:
         image: marvinenf/vuejs-dev
-        command: npm run serve
+        command: >
+            sh -c "
+                npm install &&
+                npm run serve
+            "
         network_mode: bridge
         volumes:
             - ./:/var/www/html/app
