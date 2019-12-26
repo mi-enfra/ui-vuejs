@@ -4,7 +4,7 @@ services:
         image: nginx:alpine
         network_mode: bridge
         environment:
-            - VIRTUAL_HOST=ui-vuejs.docker-experiment.com
+            - VIRTUAL_HOST=${PROJECT_URL}
         volumes:
             - ./dist:/usr/share/nginx/html
     ui-vuejs-dev:
