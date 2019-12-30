@@ -15,7 +15,7 @@ services:
     volumes:
       - ./dist:/usr/share/nginx/html
   ui-vuejs-dev:
-    image: marvinenf/vuejs-dev
+    image: ${IMAGE_NAME}
     command: sh -c "npm run serve"
     network_mode: bridge
     volumes:
