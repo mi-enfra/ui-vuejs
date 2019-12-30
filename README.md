@@ -1,24 +1,13 @@
-# app
+# Vue.js Frontend + Docker
 
-## Project setup
-```
-npm install
-```
+## Requirements
+- docker-ce & docker-compose
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+## How to Install
+- Clone repo (or create a new one using this repo as template)
+- Run `bash setup.sh`
+    - Follow instruction
 
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+## How to Use
+- Run `docker-compose up`
+- To access development server, run `bash terminal.sh`
