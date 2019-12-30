@@ -3,10 +3,13 @@ jobs:
   build:
     docker:
       - image: ubuntu:18.04
+
     steps:
       -checkout
+
       -setup_remote_docker:
         docker_laying_caching: true
+        
       -run:
         TAG=test.$CIRCLE_BUILD_NUM
         docker build -t marvinenf/vuejs-template:$TAG .
