@@ -6,6 +6,7 @@ echo 'Building local image...'
 sleep 1
 
 docker build --rm \
+    --target develop-stage \
     -t ${IMAGE_NAME} \
     .
 
