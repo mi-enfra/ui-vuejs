@@ -1,6 +1,8 @@
 #! /bin/bash
 
-IMAGE_NAME="marvinenf/vuejs-dev:dev-only"
+IMAGE_NAME="marvinenf/vuejs-template:dev-only"
 
-bash scripts/dev-setup-env.sh $IMAGE_NAME
-bash scripts/dev-build-image.sh $IMAGE_NAME
+bash scripts/setup-project-env.sh $IMAGE_NAME
+bash scripts/build-dev-image.sh $IMAGE_NAME
+
+echo "Project setup complete."

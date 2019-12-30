@@ -24,9 +24,9 @@ then
     read url
     create_env $url
     sleep 1
-    echo "Project setup. Terminating..."
+    echo "Project setup."
     sleep 1
 else
-    echo "Project already setup. Terminating..."
+    echo "Project already setup, skipping..."
     sleep 1
 fi
