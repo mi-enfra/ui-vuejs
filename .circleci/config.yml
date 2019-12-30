@@ -1,0 +1,14 @@
+version: 2.1
+jobs:
+  build:
+    docker:
+      - image: ubuntu:18.04
+    steps:
+      -checkout
+      -setup_remote_docker:
+        docker_laying_caching: true
+      -run:
+        TAG=test.$CIRCLE_BUILD_NUM
+        docker build -t marvinenf/vuejs-template:$TAG .
+        echo $DOCKER_PASS | docker login -u $DOCKER_USER --password-stdin
+        docker push marvinenv/vuejs-template:$TAG
